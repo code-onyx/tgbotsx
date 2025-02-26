@@ -1,0 +1,27 @@
+{
+  "name": "telegram-chat-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot for user communication",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "deploy": "pm2 start ecosystem.config.js --env production",
+    "deploy:dev": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop telegram-chat-bot",
+    "logs": "pm2 logs telegram-chat-bot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["telegram", "bot", "chat"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.5.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
